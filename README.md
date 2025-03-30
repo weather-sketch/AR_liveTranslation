@@ -74,9 +74,9 @@ frequency_penalty: 0.0<br>
 `````
 
 #### 节点二
-`````
 **模型**：GPT4o-mini
 **参数**：
+`````
 temperature: 0.3<br>
 max_tokens: 1000<br>
 top_p: 1.0<br>

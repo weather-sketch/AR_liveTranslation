@@ -1,6 +1,11 @@
 # 实时翻译AI Agent
+![demo](https://github.com/user-attachments/assets/8c7005c1-7ba9-49ee-add6-480bd2932cba)
+![屏幕截图 2025-03-31 005628](https://github.com/user-attachments/assets/396c6db3-cc24-4b05-aa23-ddb8afd0ad96)
+![屏幕截图 2025-03-31 005557](https://github.com/user-attachments/assets/116cd18c-a8b3-47a5-adb4-5dcf74cb5497)
+
+
 ## 项目描述
-  本项目旨在开发一款部署于Meta Rayban AI眼镜上的AI翻译Agent，提升生活场景翻译的准确性和口语化。同时，通过利用AR技术，将翻译结果叠加在现实场景中，帮助用户在跨语言交流中快速理解对话，实现无障碍沟通。整个项目将涵盖从语音信号获取、调用OpenAI Gpt4o-transribe处理文本转写、调用OpenAI Gpt-4o实现语言翻译，再到最终在AR眼镜上展示翻译结果的全流程技术开发。
+  本项目旨在开发一款部署于Meta Rayban AI眼镜上的**AI翻译Agent**，提升生活场景翻译的准确性和口语化。同时，通过利用**AR**，将翻译结果叠加在现实场景中，帮助用户在跨语言交流中快速理解对话，实现无障碍沟通。整个项目将涵盖从**语音信号获取**、**调用OpenAI GPT4o-transribe处理文本转写**、**调用OpenAI GPTt-4o实现语言翻译**，再到最终在AR眼镜上**展示翻译结果**的全流程技术开发。
 
 ## 项目PRD
 ### 需求描述
@@ -15,19 +20,24 @@
 - **便捷**： 用户无需复杂操作，系统应自动捕捉、转写和翻译，且翻译结果悬浮呈现，用户能够在对话的过程中与说话人保持眼神接触。
 
 ## 系统整体架构
-1. 语音采集模块： 集成AR眼镜的麦克风系统，实现高质量音频采集。
-2. 语音转录模块： 利用OpenAI GPT-4o-transcribe，配置System prompt来保留语气、停顿和情感信息。
-3. 翻译模块： 调用OpenAI GPT-4o，根据System prompt实现高质量的语言翻译，支持多种语言互译，并保持口语化、自然流畅的表达。
+![image](https://github.com/user-attachments/assets/113c95a4-1190-406b-855d-5b31cfe94718)
+
+1. 语音采集模块： 集成AR眼镜的麦克风系统，实现音频采集。
+2. 语音转录模块： 利用OpenAI GPT-4o-transcribe，配置System Prompt来保留语气、停顿和情感信息。
+3. 翻译模块： 调用OpenAI GPT-4o，配置System Prompt保持口语化、自然流畅的表达。
 4. AR展示模块： 将翻译结果以字幕的方式悬浮显示在说话人右边。
+
 
 ### 模型参数
 #### 节点一
 **模型**：GPT4o-mini-transribe
 **参数**：
-temperature: 0.3
-max_tokens: 1000
-top_p: 1.0
-frequency_penalty: 0.0
+`````
+temperature: 0.3<br>
+max_tokens: 1000<br>
+top_p: 1.0<br>
+frequency_penalty: 0.0<br>
+`````
 
 ### System Prompt
 `````
@@ -59,16 +69,19 @@ frequency_penalty: 0.0
 `````
 
 ### User Prompt
+`````
 {Recording}
+`````
 
 #### 节点二
+`````
 **模型**：GPT4o-mini
 **参数**：
-temperature: 0.3
-max_tokens: 1000
-top_p: 1.0
-frequency_penalty: 0.0
-
+temperature: 0.3<br>
+max_tokens: 1000<br>
+top_p: 1.0<br>
+frequency_penalty: 0.0<br>
+`````
 **System Prompt**
 `````
 你是一位专业友好、擅长多门语言，且具有丰富经验的同声传译专家，专门处理口语化、生活化的对话翻译。你不仅需要保证翻译的准确性，还要让译文听起来自然、口语化，同时完整保留原文的语气、情绪和文化背景。
@@ -99,13 +112,15 @@ frequency_penalty: 0.0
 - 示例 3：
   - Human："Oh, I would love to, but it is Ramadam, I can't go, I am sorry"
   - Assistant："啊，我是挺想去的，但最近是开斋节，我去不成了，真对不住。（穆斯林教徒的节日，每日自黎明前至日落，禁绝饮食）"
-````
+`````
 
 ### User Prompt
+`````
 {tts结果}
 以上是此次对话内容，请严格按照上述要求进行翻译。
+`````
 
+## 实现细节
 
-## 技术实现
 后端架构设计
 ![image](https://github.com/user-attachments/assets/b2c10d69-17ea-4de2-9376-af587598a71e)

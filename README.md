@@ -1,12 +1,11 @@
-# 实时翻译AI Agent
+# Interpreter Agent
 ![demo](https://github.com/user-attachments/assets/8c7005c1-7ba9-49ee-add6-480bd2932cba)
 ![image](https://github.com/user-attachments/assets/8424d311-88b5-45b6-a8ec-2c56a91584ba)
 ![image](https://github.com/user-attachments/assets/11859cae-20c1-47f2-a923-c172ad37f4f3)
 
 
-
 ## 项目描述
-- 本项目旨在开发一款部署于Meta Rayban AI眼镜上的**AI翻译Agent**，提升生活场景翻译的准确性和口语化。
+- 本项目旨在开发一款部署于Meta Quest 3上的**AI翻译Agent**，提升生活场景翻译的准确性和口语化。
 - 利用**AR**，将翻译结果叠加在现实场景中，帮助用户在跨语言交流中快速理解对话，实现无障碍沟通。
 - 整个项目将涵盖从**语音信号获取**、**调用OpenAI GPT4o-transribe处理文本转写**、**调用OpenAI GPTt-4o实现语言翻译**，再到最终在AR眼镜上**展示翻译结果**的全流程**产品设计和技术开发**。
 

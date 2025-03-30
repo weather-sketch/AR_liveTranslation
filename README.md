@@ -1,7 +1,8 @@
 # 实时翻译AI Agent
 ![demo](https://github.com/user-attachments/assets/8c7005c1-7ba9-49ee-add6-480bd2932cba)
-![屏幕截图 2025-03-31 005628](https://github.com/user-attachments/assets/396c6db3-cc24-4b05-aa23-ddb8afd0ad96)
-![屏幕截图 2025-03-31 005557](https://github.com/user-attachments/assets/116cd18c-a8b3-47a5-adb4-5dcf74cb5497)
+![image](https://github.com/user-attachments/assets/8424d311-88b5-45b6-a8ec-2c56a91584ba)
+![image](https://github.com/user-attachments/assets/11859cae-20c1-47f2-a923-c172ad37f4f3)
+
 
 
 ## 项目描述
@@ -22,10 +23,17 @@
 ## 系统整体架构
 ![image](https://github.com/user-attachments/assets/113c95a4-1190-406b-855d-5b31cfe94718)
 
-1. 语音采集模块： 集成AR眼镜的麦克风系统，实现音频采集。
-2. 语音转录模块： 利用OpenAI GPT-4o-transcribe，配置System Prompt来保留语气、停顿和情感信息。
-3. 翻译模块： 调用OpenAI GPT-4o，配置System Prompt保持口语化、自然流畅的表达。
-4. AR展示模块： 将翻译结果以字幕的方式悬浮显示在说话人前方。
+1. 语音采集模块
+   - 用户点击UI，触发麦克风开启
+   - 用户点击UI，获取源语言和翻译语言代码
+   - 等待10秒，监测到声音则发送转录请求，否则回到未唤醒状态
+3. 语音转录模块
+   利用OpenAI GPT-4o-transcribe，配置System Prompt来保留语气、停顿和情感信息。
+4. 翻译模块
+   调用OpenAI GPT-4o，配置System Prompt保持口语化、自然流畅的表达。
+6. 前端展示模块：
+   - 空间计算，计算对话双方的距离，决定字幕悬浮显示距离
+   - 前端流式显示翻译结果
 
 
 ### 模型参数
@@ -121,6 +129,5 @@ frequency_penalty: 0.0
 `````
 
 ## 实现细节
-
-后端架构设计
+架构设计
 ![image](https://github.com/user-attachments/assets/b2c10d69-17ea-4de2-9376-af587598a71e)

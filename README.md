@@ -29,11 +29,11 @@
 - 用户点击UI，触发麦克风开启
 - 用户点击UI，获取源语言和翻译语言代码
 - 等待10秒，监测到声音则发送转录请求，否则回到未唤醒状态
-3. 语音转录模块
-利用OpenAI GPT-4o-transcribe，配置System Prompt来保留语气、停顿和情感信息。
-4. 翻译模块
-调用OpenAI GPT-4o，配置System Prompt保持口语化、自然流畅的表达。
-6. 前端展示模块：
+2. 语音转录模块
+- 利用OpenAI GPT-4o-transcribe，配置System Prompt来保留语气、停顿和情感信息。
+3. 翻译模块
+- 调用OpenAI GPT-4o，配置System Prompt保持口语化、自然流畅的表达。
+4. 前端展示模块：
 - 空间计算，计算对话双方的距离，决定字幕悬浮显示距离
 - 前端流式显示翻译结果
 

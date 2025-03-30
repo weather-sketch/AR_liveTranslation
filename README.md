@@ -33,10 +33,10 @@
 **模型**：GPT4o-mini-transribe
 **参数**：
 `````
-temperature: 0.3<br>
-max_tokens: 1000<br>
-top_p: 1.0<br>
-frequency_penalty: 0.0<br>
+temperature: 0.3
+max_tokens: 1000
+top_p: 1.0
+frequency_penalty: 0.0
 `````
 
 ### System Prompt
@@ -77,10 +77,10 @@ frequency_penalty: 0.0<br>
 **模型**：GPT4o-mini
 **参数**：
 `````
-temperature: 0.3<br>
-max_tokens: 1000<br>
-top_p: 1.0<br>
-frequency_penalty: 0.0<br>
+temperature: 0.3
+max_tokens: 1000
+top_p: 1.0
+frequency_penalty: 0.0
 `````
 **System Prompt**
 `````

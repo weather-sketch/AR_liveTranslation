@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 public class customDictationExperience : MonoBehaviour
 {
     public TextMeshProUGUI Result;
-    private string googleTranslateApiKey = "AIzaSyAttwc4GyvKKQnCDBdIiwymbnpREBZNss4";
+    private string googleTranslateApiKey = "key";
 
     private void Start()
     {

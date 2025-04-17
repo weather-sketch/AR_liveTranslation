@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 public class customDictationExperience : MonoBehaviour
 {
     public TextMeshProUGUI Result;
-    private string googleTranslateApiKey = "key";
+    private string OpenAIApiKey = "key";
 
     private void Start()
     {
@@ -30,8 +30,7 @@ public class customDictationExperience : MonoBehaviour
     }
     private IEnumerator Translate(string text)
     {
-        string url = $"https://translation.googleapis.com/language/translate/v2?key={googleTranslateApiKey}";
-
+        string url = $"OpenAIAPI";
 
         var jsonData = new JObject();
         jsonData["q"] = text;
